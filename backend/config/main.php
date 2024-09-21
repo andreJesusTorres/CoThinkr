@@ -6,6 +6,17 @@ $params = array_merge(
     require __DIR__ . '/params-local.php'
 );
 
+$db = require __DIR__. '/../../common/config/main.php';
+
+$config = [
+
+    'id' => 'app-backend',
+    'components' => $db['components'],
+    'params' => $params, 
+];
+
+return $config;
+
 return [
     'id' => 'app-backend',
     'basePath' => dirname(__DIR__),

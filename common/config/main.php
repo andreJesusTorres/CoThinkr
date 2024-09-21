@@ -1,4 +1,15 @@
 <?php
+$params = require __DIR__ . '/params.php';
+$db = require __DIR__ . '/main-local.php';
+
+$config = [
+    'id' => 'app-common',
+    'components' => $db['components'],
+    'params' => $params,
+];
+
+return $config;
+
 return [
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
